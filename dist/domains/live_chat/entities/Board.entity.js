@@ -50,4 +50,4 @@ Board = __decorate([
     (0, typeorm_1.Entity)()
 ], Board);
 exports.Board = Board;
-//# sourceMappingURL=Board.entity.js.map
+//# sourceMappingURL=board.entity.js.map

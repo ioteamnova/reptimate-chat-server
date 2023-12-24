@@ -9,11 +9,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BoardRepository = void 0;
 const typeorm_1 = require("typeorm");
 const typeorm_ex_decorator_1 = require("../../../core/decorators/typeorm-ex.decorator");
-const Board_entity_1 = require("../entities/board.entity");
+const board_entity_1 = require("../entities/board.entity");
 let BoardRepository = class BoardRepository extends typeorm_1.Repository {
 };
 BoardRepository = __decorate([
-    (0, typeorm_ex_decorator_1.CustomRepository)(Board_entity_1.Board)
+    (0, typeorm_ex_decorator_1.CustomRepository)(board_entity_1.Board)
 ], BoardRepository);
 exports.BoardRepository = BoardRepository;
 //# sourceMappingURL=board.repository.js.map
