@@ -31,8 +31,8 @@ jobs:
       - name: create env file
         run: |
           touch .env.prod
-          echo AWS_ACCESS_KEY_ID=${{ secrets.PROD_AWS_ACCESS_KEY_ID }} >> .env.prod
-          echo AWS_SECRET_ACCESS_KEY=${{ secrets.secrets.PROD_AWS_SECRET_KEY }} >> .env.prod
+          echo AWS_ACECSS_KEY_ID=${{ secrets.PROD_AWS_ACCESS_KEY_ID }} >> .env.prod
+          echo AWS_SECRET_ACCESS_KEY=${{ secrets.PROD_AWS_SECRET_KEY }} >> .env.prod
           echo MYSQL_HOST=${{ secrets.PROD_MYSQL_HOST }} >> .env.prod
           echo MYSQL_PORT=${{ secrets.PROD_MYSQL_PORT }} >> .env.prod
           echo MYSQL_USER=${{ secrets.PROD_MYSQL_USER }} >> .env.prod
@@ -45,6 +45,10 @@ jobs:
           echo NODE_MAILER_PASSWORD=${{ secrets.PROD_NODE_MAILER_PASSWORD }} >> .env.prod
           echo JWT_SECRET=${{ secrets.PROD_JWT_SECRET }} >> .env.prod
           echo FILE_CONVERTER_IP=${{ secrets.PROD_FILE_CONVERTER_IP }} >> .env.prod
+          echo S3_URL=${{ secrets.PROD_S3_URL }} >> .env.prod
+          echo REDIS_HOST=${{ secrets.PROD_REDIS_HOST }} >> .env.prod
+          echo REDIS_PASSWORD=${{ secrets.PROD_REDIS_PASSWORD }} >> .env.prod
+          
       - name: create-json
         id: create-json
         uses: jsdaniell/create-json@1.1.2
